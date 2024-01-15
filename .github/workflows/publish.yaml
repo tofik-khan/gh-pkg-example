@@ -34,10 +34,10 @@ jobs:
           git checkout -b release/${{env.RELEASE_VERSION}}
 
       - name: Install dependencies
-        run: yarn && yarn install
+        run: npm install
 
       - name: Build
-        run: yarn build
+        run: npm run build
 
       - name: Patch version
         run: |
@@ -47,13 +47,13 @@ jobs:
 
           echo "Release version: ${{env.RELEASE_VERSION}}"
 
-          yarn config set version-git-tag false
-          yarn version --new-version ${{env.RELEASE_VERSION}}
+          npm config set version-git-tag false
+          npm version --new-version ${{env.RELEASE_VERSION}}
 
           git commit package.json -m "Updated package.json version to version released ${{env.RELEASE_VERSION}}"
           git push publisher HEAD:release/v${{env.RELEASE_VERSION}}
 
       - name: Publish
-        run: yarn publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
