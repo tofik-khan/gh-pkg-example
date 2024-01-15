@@ -4,7 +4,7 @@
   "description": "A test GitHub Package made with Typescript in preparation for more packages pusblished in teh future",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tofik-khan/gh-pkg-example.git"
+    "url": "https://github.com/tofik-khan/gh-pkg-example.git"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
