@@ -1,9 +1,5 @@
 echo "Running script publish.sh...";
 
-echo "1 = $1";
-echo "2 = $2";
-exit;
-
 echo "publish.sh: Switching to master branch";
 echo " >>> Potentially stashes uncommited work";
 git stash;
