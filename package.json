@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "publish": "./scripts/publish.sh"
+    "publish": "npm run build && ./scripts/publish.sh"
   },
   "author": "",
   "license": "ISC",

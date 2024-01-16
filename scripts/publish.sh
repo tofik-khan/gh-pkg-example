@@ -15,12 +15,11 @@ messageBody="Auto-generate release commit\
 \
 Publish version $version to npm using publish.sh script.";
 
-git commit -m "$messageTitle" -m "$messageBody";
+#git commit -m "$messageTitle" -m "$messageBody";
 
 
 echo "publish.sh: Pushing updated version to GitHub";
-git push;
+##git push;
 
 echo "publish.sh: Publishing to NPM registery";
-npm run build;
-npm publish;
+##npm publish;
