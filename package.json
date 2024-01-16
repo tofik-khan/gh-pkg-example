@@ -1,26 +1,26 @@
 {
   "name": "gh-pkg-example",
-  "version": "1.0.0",
-  "description": "A test GitHub Package made with Typescript in preparation for more packages pusblished in teh future",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tofik-khan/gh-pkg-example.git"
+  "version": "1.0.1",
+  "description": "",
+  "main": "dist/index.js", 
+  "files": [
+    "dist" 
+  ],
+  "exports": { 
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "type": "module",
   "scripts": {
-    "build": "npx tsup --dts"
+    "build": "tsc" 
   },
-  "author": "Tofik Khan",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "tsup": "^8.0.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.1.6"
   },
-  "dependencies": {
-    "dotenv": "^16.3.1",
-    "node": "^21.2.0"
+  "peerDependencies": {
+    "react": "^18.2.0" 
   }
 }
