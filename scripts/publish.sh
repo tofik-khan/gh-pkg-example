@@ -19,7 +19,7 @@ Publish version $version to npm using publish.sh script.";
 
 
 echo "publish.sh: Pushing updated version to GitHub";
-##git push;
+git push;
 
 echo "publish.sh: Publishing to NPM registery";
 ##npm publish;
