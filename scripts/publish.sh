@@ -22,4 +22,5 @@ echo "publish.sh: Pushing updated version to GitHub";
 git push;
 
 echo "publish.sh: Publishing to NPM registery";
+npm run build;
 npm publish;
