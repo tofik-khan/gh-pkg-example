@@ -15,3 +15,6 @@ echo "publish.sh: package.json updated to version: $version";
 
 echo "publish.sh: Pushing updated version to GitHub";
 git push;
+
+echo "publish.sh: Publishing to NPM registry";
+npm publish;
