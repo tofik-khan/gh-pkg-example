@@ -1,5 +1,9 @@
 echo "Running script publish.sh...";
 
+echo "1 = $1";
+echo "2 = $2";
+exit;
+
 echo "publish.sh: Switching to master branch";
 echo " >>> Potentially stashes uncommited work";
 git stash;
@@ -9,7 +13,18 @@ echo "publish.sh: Pulling latest changes";
 git pull; 
 
 echo "publish.sh: Bump version in package.json";
-version=$(npm version patch);
+
+echo "Checking release type...";
+if [ "$1" == "--release=major" ]; then
+  echo "Setting as MAJOR release";
+  version=$(npm version major);
+elif [ "$1" == "--release=minor" ]; then
+  echo "Setting as MINOR release";
+  version=$(npm version minor);
+else
+  echo "Setting as PATCH release";
+  version=$(npm version patch);
+fi
 
 echo "publish.sh: package.json updated to version: $version";
 

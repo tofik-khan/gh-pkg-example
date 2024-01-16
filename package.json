@@ -14,7 +14,9 @@
   },
   "scripts": {
     "build": "tsc",
-    "deploy": "npm run build && ./scripts/publish.sh"
+    "deploy": "npm run build && ./scripts/publish.sh",
+    "deploy:minor": "npm run build && ./scripts/publish.sh --release=minor",
+    "deploy:major": "npm run build && ./scripts/publish.sh --release=major"
   },
   "author": "",
   "license": "ISC",
